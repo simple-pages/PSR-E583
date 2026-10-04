@@ -106,628 +106,896 @@
         // Keep the header row (No,Type,Name) intact.
         // =========================================================================
         const rawCsvData = `No,Type,Name
-1,Piano,Live! Concert Grand Piano
-2,Piano,Grand Piano
-3,Piano,Bright Piano
-4,Piano,Harpsichord
-5,Piano,Honky Tonk Piano
-6,Piano,MIDI Grand Piano
-7,Piano,CP80
-8,E Piano,Cool! SuitcaseEP
-9,E Piano,JazzChorusEP
-10,E Piano,PhaseEP
-11,E Piano,Cool! TremoloEP
-12,E Piano,Cool! ElectricPiano
-13,E Piano,StageEP
-14,E Piano,Cool! Galaxy Electric Piano
-15,E Piano,Hyper Tines
-16,E Piano,Funky Electric Piano
-17,E Piano,DX Modern Electric Piano
-18,E Piano,Venus Electric Piano
-19,E Piano,Clavi
-20,E Piano,WahClavi
-21,Organ,Cool! Organ
-22,Organ,Cool! Rotor Organ
-23,Organ,Jazz Organ 1
-24,Organ,Jazz Organ 1 plus RotaryFast
-25,Organ,Jazz Organ 2
-26,Organ,Jazz Organ 2 plus RotaryFast
-27,Organ,Rock Organ
-28,Organ,Octave Shift Organ
-29,Organ,Purple Organ
-30,Organ,Click Organ
-31,Organ,Bright Organ
-32,Organ,Theater Organ
-33,Organ,16' plus 2' Organ
-34,Organ,16' plus 4' Organ
-35,Organ,Chapel Organ
-36,Organ,Pipe Organ
-37,Organ,Reed Organ
-38,Accordian,Musette Accordion
-39,Accordian,Traditional Accordion
-40,Accordian,Bandoneon
-41,Accordian,Modern Harp
-42,Accordian,Blues Harp
-43,Accordian,Harmonica
-44,Guitar,S.Art Lite (Nylon Harmonics)
-45,Guitar,S.Art Lite (Steel Hrmonics)
-46,Guitar,S.Art Lite (Nylon Slide)
-47,Guitar,S.Art Lite Steel Guitar Slide ***
-48,Guitar,S.Art Lite Distortion Guitar ***
-49,Guitar,Dynamic Nylon Guitar
-50,Guitar,Dynamic Overdriven
-51,Guitar,Dynamic Distortion Guitar
-52,Guitar,Nylon Guitar
-53,Guitar,Classical Guitar
-54,Guitar,Steel Guitar
-55,Guitar,Folk Guitar
-56,Guitar,Jazz Guitar
-57,Guitar,60s Clean Guitar
-58,Guitar,12Strings Guitar
-59,Guitar,Clean Guitar
-60,Guitar,Wah Guitar
-61,Guitar,Octave Guitar
-62,Guitar,Muted Guitar
-63,Guitar,Overdriven Guitar
-64,Guitar,Distortion Guitar
-65,Guitar,Wah Distortion Guitar
-66,Bass,S.Art Lite Slap Bass ***
-67,Bass,Dynamic Electric Bass
-68,Bass,Finger Bass
-69,Bass,Acoustic Bass
-70,Bass,Pick Bass
-71,Bass,Fretless Bass
-72,Bass,Slap Bass
-73,Bass,Funk Bass
-74,Bass,Synth Bass
-75,Bass,Hi-Q Bass
-76,Bass,Dance Bass
-77,Strings,S.Art Lite Strings ***
-78,Strings,Live! Strings
-79,Strings,Studio Strings
-80,Strings,Strings
-81,Strings,Chamber Strings
-82,Strings,Marcato Strings
-83,Strings,Slow Strings
-84,Strings,Tremolo Strings
-85,Strings,Synth Strings
-86,Strings,Pizzicato Strings
-87,Strings,Orchestra Pizzicato Strings
-88,Strings,Sweet! Violin
-89,Strings,Violin
-90,Strings,Cello
-91,Strings,Contrabass
-92,Strings,Harp
-93,Strings,Orchestra Hit
-94,Choir,S.Art Lite Gospel Choir ***
-95,Choir,Choir
-96,Choir,Gospel Hmm
-97,Choir,Gospel Wow
-98,Choir,Vocal Ensemble
-99,Choir,Air Choir
-100,Choir,Vox Humana
-101,Saxophone,S.Art Lite Tenor Sax ***
-102,Saxophone,Sax Section
-103,Saxophone,Sweet! Tenor Sax
-104,Saxophone,Tenor Sax
-105,Saxophone,Alto Sax
-106,Saxophone,Soprano Sax
-107,Saxophone,Baritone Sax
-108,Saxophone,Breathy Tenor Sax
-109,Saxophone,Small Sax Section
-110,Saxophone,Clarinet
-111,Saxophone,Oboe
-112,Saxophone,English Horn
-113,Saxophone,Bassoon
-114,Trumpet,Trumpet
-115,Trumpet,Distortion Trumpet
-116,Trumpet,Trombone
-117,Trumpet,Trombone Section
-118,Trumpet,Muted Trumpet
-119,Trumpet,French Horn
-120,Trumpet,Tuba
-121,Brass,S.Art Lite Brass Section ***
-122,Brass,Live! Brass
-123,Brass,Brass Section
-124,Brass,Big Band Brass
-125,Brass,Octave Brass
-126,Brass,80s Brass
-127,Brass,Mellow Horns
-128,Brass,Funky Brass
-129,Brass,Techno Brass
-130,Brass,Synth Brass
-131,Flute,S.Art Lite Flute ***
-132,Flute,Sweet! Flute
-133,Flute,Sweet! Classical Flute
-134,Flute,Flute
-135,Flute,Piccolo
-136,Flute,Pan Flute
-137,Flute,Recorder
-138,Flute,Ocarina
-139,Synth,Gemini
-140,Synth,Hands Up!
-141,Synth,Square Lead
-142,Synth,Sawtooth Lead
-143,Synth,RS Tech Saw
-144,Synth,Under Heim
-145,Synth,Portatone
-146,Synth,Analogon 1
-147,Synth,Fargo 1
-148,Synth,Analogon 2
-149,Synth,Fargo 2
-150,Synth,Voice Lead
-151,Synth,Funky Lead
-152,Synth,Sweet Heaven
-153,Synth,Dream Heaven
-154,Synth,Symbiont
-155,Synth,Stardust
-156,Synth,Brightness
-157,Synth,Xenon Pad
-158,Synth,Equinox
-159,Synth,Fantasia
-160,Synth,Dark Moon
-161,Synth,Bell Pad
-162,Synth,RS Analog Pad
-163,Synth,RS Short Resonance
-164,Percussion,Vibraphone
-165,Percussion,Jazz Vibes
-166,Percussion,Marimba
-167,Percussion,Xylophone
-168,Percussion,Steel Drums
-169,Percussion,Celesta
-170,Percussion,Music Box
-171,Percussion,Tubular Bells
-172,Percussion,Timpani
-173,World,Banjo
-174,World,Fiddle
-175,World,Bagpipe
-176,World,Dulcimer 1
-177,World,Dulcimer 2
-178,World,Cimbalom
-179,World,Santur
-180,World,Kanoon
-181,World,Oud
-182,World,Rabab
-183,World,Kalimba
-184,World,Harmonium 1 (Single Reed)
-185,World,Harmonium 2 (Double Reed)
-186,World,Harmonium 3 (Triple Reed)
-187,World,Tanpura
-188,World,Pungi
-189,World,Bansuri
-190,World,Sitar 1
-191,World,Detuned Sitar
-192,World,Sitar 2
-193,World,Shehnai
-194,World,Gopichant
-195,World,Tabla
-196,World,Er Hu
-197,World,Di Zi
-198,World,Pi Pa
-199,World,Gu Zheng
-200,World,Yang Qin
-201,World,Morin Khuur
-202,World,Suling
-203,World,Shamisen
-204,World,Koto
-205,World,Taisho-kin
-206,Dual,Octave Piano
-207,Dual,Piano and Strings
-208,Dual,Piano Pad
-209,Dual,Octave Harpsichord
-210,Dual,Tiny Electric Piano
-211,Dual,Electric Piano Pad
-212,Dual,Full Organ
-213,Dual,Octave Jazz Guitar
-214,Dual,Octave Strings
-215,Dual,Orchestra Section
-216,Dual,Octave Pizzicato Strings
-217,Dual,Strings Session
-218,Dual,Brass Tutti
-219,Dual,Orchestra Tutti
-220,Dual,Octave French Horns
-221,Dual,Octave Harp
-222,Dual,Orchestra Hit and Timpani
-223,Dual,Octave Choir
-224,Dual,Jazz Brass Section
-225,Dual,Jazz Section
-226,Dual,Ballroom Sax Ensemble
-227,Dual,Ballroom Brass
-228,Dual,Flute and Clarinet
-229,Dual,Trumpet and Trombone
-230,Dual,Fat Synth Brass
-231,Dual,Octave Lead
-232,Dual,Super 5th Lead
-233,Sound Effect,Fret Noise
-234,Sound Effect,Breath Noise
-235,Sound Effect,Seashore
-236,Sound Effect,Bird Tweet
-237,Sound Effect,Telephone Ring
-238,Sound Effect,Helicopter
-239,Sound Effect,Applause
-240,Sound Effect,Hand Clap
-241,Sound Effect,Gunshot
-242,Drum Kit,Power Kit
-243,Drum Kit,Standard Kit 1
-244,Drum Kit,Standard Kit 2
-245,Drum Kit,Room Kit
-246,Drum Kit,Rock Kit
-247,Drum Kit,Electronic Kit
-248,Drum Kit,Analog Kit
-249,Drum Kit,Dance Kit
-250,Drum Kit,Jazz Kit
-251,Drum Kit,Brush Kit
-252,Drum Kit,Symphony Kit
-253,Drum Kit,StdKit 1 plus Chinese Perc.
-254,Drum Kit,Indian Kit 1
-255,Drum Kit,Indian Kit 2
-256,Drum Kit,StdKit 1 plus Indonesian Perc. 1
-257,Drum Kit,StdKit 1 plus Indonesian Perc. 2
-258,Drum Kit,StdKit 1 plus Indonesian Perc. 3
-259,Drum Kit,Arabic Kit
-260,Drum Kit,Cuban Kit
-261,Drum Kit,SFX Kit 1
-262,Drum Kit,SFX Kit 2
-263,Drum Kit,Sound Effect Kit
-264,Apreggio,Concerto
-265,Apreggio,Latin Rock
-266,Apreggio,Brass Section
-267,Apreggio,Piano Ballad
-268,Apreggio,Synth Sequence
-269,Apreggio,Guitarist
-270,Apreggio,Pickin'
-271,Apreggio,Spanish
-272,Apreggio,Funky Clavi
-273,Apreggio,Harpeggio
-274,Apreggio,Finger Bass Left
-275,Apreggio,Combo Jazz Left
-276,Apreggio,Paul's Bass Left
-277,Apreggio,Trance Bass Left
-278,Apreggio,Acid Bass Left
-279,Apreggio,Piano Ballad Left
-280,Apreggio,Salsa Piano Left
-281,Apreggio,Piano Arpeggio Left
-282,Apreggio,Guitar Arpeggio Left
-283,Apreggio,Strum Left
-284,XG Piano,Grand Piano
-285,XG Piano,Grand Piano KSP
-286,XG Piano,Piano Strings
-287,XG Piano,Dream
-288,XG Piano,Bright Piano
-289,XG Piano,Bright Piano KSP
-290,XG Piano,Electric Grand Piano
-291,XG Piano,Electric Grand Piano KSP
-292,XG Piano,Detuned CP80
-293,XG Piano,Honky Tonk Piano
-294,XG Piano,Honky Tonk Piano KSP
-295,XG Piano,Electric Piano 1
-296,XG Piano,Electric Piano 1 KSP
-297,XG Piano,Chorus Electric Piano 1
-298,XG Piano,Electric Piano 2
-299,XG Piano,Electric Piano 2 KSP
-300,XG Piano,Chorus Electric Piano 2
-301,XG Piano,DX plus Analog Electric Piano
-302,XG Piano,Harpsichord 1
-303,XG Piano,Harpsichord KSP
-304,XG Piano,Harpsichord 2
-305,XG Piano,Clavi
-306,XG Piano,Clavi KSP
-307,XG Chromatic,Celesta
-308,XG Chromatic,Glockenspiel
-309,XG Chromatic,Music Box 1
-310,XG Chromatic,Music Box 2
-311,XG Chromatic,Vibraphone
-312,XG Chromatic,Vibraphone KSP
-313,XG Chromatic,Marimba
-314,XG Chromatic,Marimba KSP
-315,XG Chromatic,Sine Marimba
-316,XG Chromatic,Balimba
-317,XG Chromatic,Log Drums
-318,XG Chromatic,Xylophone
-319,XG Chromatic,Tubular Bells
-320,XG Chromatic,Church Bells
-321,XG Chromatic,Carillon
-322,XG Organ,Drawbar Organ 1
-323,XG Organ,Detuned Drawbar Organ
-324,XG Organ,60s Drawbar Organ 1
-325,XG Organ,60s Drawbar Organ 2
-326,XG Organ,70s Drawbar Organ 1
-327,XG Organ,60s Drawbar Organ 3
-328,XG Organ,16 plus 2'2/3 Organ
-329,XG Organ,Organ Bass
-330,XG Organ,70s Drawbar Organ 2
-331,XG Organ,Cheezy Organ
-332,XG Organ,Drawbar Organ 2
-333,XG Organ,Percussive Organ 1
-334,XG Organ,70s Percussive Organ
-335,XG Organ,Detuned Percussive Organ
-336,XG Organ,Light Organ
-337,XG Organ,Percussive Organ 2
-338,XG Organ,Rock Organ
-339,XG Organ,Rotary Organ
-340,XG Organ,Slow Rotary Organ
-341,XG Organ,Fast Rotary Organ
-342,XG Organ,Church Organ 1
-343,XG Organ,Church Organ 3
-344,XG Organ,Church Organ 2
-345,XG Organ,Notre Dame
-346,XG Organ,Organ Flute
-347,XG Organ,Tremolo Organ Flute
-348,XG Organ,Reed Organ
-349,XG Organ,Puff Organ
-350,XG Organ,Accordion
-351,XG Organ,Harmonica 1
-352,XG Organ,Harmonica 2
-353,XG Organ,Tango Accordion 1
-354,XG Organ,Tango Accordion 2
-355,XG Guitar,Nylon Guitar 1
-356,XG Guitar,Nylon Guitar 3
-357,XG Guitar,Velocity Guitar Harmonics
-358,XG Guitar,Ukulele
-359,XG Guitar,Steel Guitar
-360,XG Guitar,12-string Guitar
-361,XG Guitar,Nylon and Steel Guitar
-362,XG Guitar,Steel Guitar with Body Sound
-363,XG Guitar,Mandolin
-364,XG Guitar,Jazz Guitar
-365,XG Guitar,Jazz Amp
-366,XG Guitar,Clean Guitar
-367,XG Guitar,Chorus Guitar
-368,XG Guitar,Muted Guitar
-369,XG Guitar,Funk Guitar
-370,XG Guitar,Muted Steel Guitar
-371,XG Guitar,Jazz Man
-372,XG Guitar,Overdriven Guitar
-373,XG Guitar,Guitar Pinch
-374,XG Guitar,Distortion Guitar
-375,XG Guitar,Feedback Guitar 1
-376,XG Guitar,Feedback Guitar 2
-377,XG Guitar,Guitar Harmonics 1
-378,XG Guitar,Guitar Feedback
-379,XG Guitar,Guitar Harmonics 2
-380,XG Bass,Acoustic Bass
-381,XG Bass,Jazz Rhythm
-382,XG Bass,Velocity Crossfade Upright Bass
-383,XG Bass,Finger Bass 1
-384,XG Bass,Finger Bass Dark
-385,XG Bass,Bass and Distorted Electric Guitar
-386,XG Bass,Finger Slap Bass
-387,XG Bass,Finger Bass 2
-388,XG Bass,Modulated Bass
-389,XG Bass,Pick Bass
-390,XG Bass,Muted Pick Bass
-391,XG Bass,Fretless Bass 1
-392,XG Bass,Fretless Bass 2
-393,XG Bass,Fretless Bass 3
-394,XG Bass,Fretless Bass 4
-395,XG Bass,Slap Bass 1
-396,XG Bass,Punch Thumb Bass
-397,XG Bass,Slap Bass 2
-398,XG Bass,Velocity Switch Slap
-399,XG Bass,Synth Bass 1
-400,XG Bass,Techno Synth Bass
-401,XG Bass,Synth Bass 2
-402,XG Bass,Mellow Synth Bass
-403,XG Bass,Sequenced Bass
-404,XG Bass,Click Synth Bass
-405,XG Bass,Synth Bass 2 Dark
-406,XG Bass,Modular Synth Bass
-407,XG Bass,DX Bass
-408,XG Strings,Violin
-409,XG Strings,Slow Violin
-410,XG Strings,Viola
-411,XG Strings,Cello
-412,XG Strings,Contrabass
-413,XG Strings,Tremolo Strings
-414,XG Strings,Slow Tremolo Strings
-415,XG Strings,Suspense Strings
-416,XG Strings,Pizzicato Strings
-417,XG Strings,Orchestral Harp
-418,XG Strings,Timpani
-419,XG Ensemble,Strings 1
-420,XG Ensemble,Stereo Strings
-421,XG Ensemble,Slow Strings
-422,XG Ensemble,60s Strings
-423,XG Ensemble,Orchestra 1
-424,XG Ensemble,Orchestra 2
-425,XG Ensemble,Tremolo Orchestra
-426,XG Ensemble,Velocity Strings
-427,XG Ensemble,Strings 2
-428,XG Ensemble,Stereo Slow Strings
-429,XG Ensemble,Legato Strings
-430,XG Ensemble,Warm Strings
-431,XG Ensemble,Kingdom
-432,XG Ensemble,Synth Strings 1
-433,XG Ensemble,Synth Strings 4
-434,XG Ensemble,Synth Strings 2
-435,XG Ensemble,Choir Aahs
-436,XG Ensemble,Stereo Choir
-437,XG Ensemble,Mellow Choir
-438,XG Ensemble,Choir Strings
-439,XG Ensemble,Voice Oohs
-440,XG Ensemble,Synth Voice 1
-441,XG Ensemble,Synth Voice 2
-442,XG Ensemble,Choral
-443,XG Ensemble,Analog Voice
-444,XG Ensemble,Orchestra Hit 1
-445,XG Ensemble,Orchestra Hit 2
-446,XG Ensemble,Impact
-447,XG Brass,Trumpet
-448,XG Brass,Warm Trumpet
-449,XG Brass,Trombone 1
-450,XG Brass,Trombone 2
-451,XG Brass,Tuba
-452,XG Brass,Muted Trumpet
-453,XG Brass,French Horn 1
-454,XG Brass,French Horn Solo
-455,XG Brass,French Horn 2
-456,XG Brass,Horn Orchestra
-457,XG Brass,Brass Section
-458,XG Brass,Trumpet and Trombone Section
-459,XG Brass,Synth Brass 1
-460,XG Brass,Resonant Synth Brass
-461,XG Brass,Synth Brass 2
-462,XG Brass,Soft Brass
-463,XG Brass,Choir Brass
-464,XG Reed,Soprano Sax
-465,XG Reed,Alto Sax
-466,XG Reed,Sax Section
-467,XG Reed,Tenor Sax
-468,XG Reed,Breathy Tenor Sax
-469,XG Reed,Baritone Sax
-470,XG Reed,Oboe
-471,XG Reed,English Horn
-472,XG Reed,Bassoon
-473,XG Reed,Clarinet
-474,XG Pipe,Piccolo
-475,XG Pipe,Flute
-476,XG Pipe,Recorder
-477,XG Pipe,Pan Flute
-478,XG Pipe,Blown Bottle
-479,XG Pipe,Whistle
-480,XG Pipe,Ocarina
-481,XG Synth Lead,Square Lead 1
-482,XG Synth Lead,Square Lead 2
-483,XG Synth Lead,LM Square
-484,XG Synth Lead,Hollow
-485,XG Synth Lead,Shroud
-486,XG Synth Lead,Mellow
-487,XG Synth Lead,Solo Sine
-488,XG Synth Lead,Sine Lead
-489,XG Synth Lead,Sawtooth Lead 1
-490,XG Synth Lead,Sawtooth Lead 2
-491,XG Synth Lead,Thick Sawtooth
-492,XG Synth Lead,Dynamic Sawtooth
-493,XG Synth Lead,Digital Sawtooth
-494,XG Synth Lead,Big Lead
-495,XG Synth Lead,Heavy Synth
-496,XG Synth Lead,Sequenced Analog
-497,XG Synth Lead,Calliope Lead
-498,XG Synth Lead,Pure Lead
-499,XG Synth Lead,Chiff Lead
-500,XG Synth Lead,Charang Lead
-501,XG Synth Lead,Distorted Lead
-502,XG Synth Lead,Voice Lead
-503,XG Synth Lead,Fifths Lead
-504,XG Synth Lead,Big Five
-505,XG Synth Lead,Bass and Lead
-506,XG Synth Lead,Big and Low
-507,XG Synth Lead,Fat and Perky
-508,XG Synth Lead,Soft Whirl
-509,XG Synth Pad,New Age Pad
-510,XG Synth Pad,Fantasy
-511,XG Synth Pad,Warm Pad
-512,XG Synth Pad,Poly Synth Pad
-513,XG Synth Pad,Choir Pad
-514,XG Synth Pad,Itopia
-515,XG Synth Pad,Bowed Pad
-516,XG Synth Pad,Metallic Pad
-517,XG Synth Pad,Halo Pad
-518,XG Synth Pad,Sweep Pad
-519,XG Synth Effects,Rain
-520,XG Synth Effects,Harmo Rain
-521,XG Synth Effects,African Wind
-522,XG Synth Effects,Carib
-523,XG Synth Effects,Sound Track
-524,XG Synth Effects,Prologue
-525,XG Synth Effects,Crystal
-526,XG Synth Effects,Synth Drum Comp
-527,XG Synth Effects,Popcorn
-528,XG Synth Effects,Tiny Bells
-529,XG Synth Effects,Round Glockenspiel
-530,XG Synth Effects,Glockenspiel Chimes
-531,XG Synth Effects,Clear Bells
-532,XG Synth Effects,Chorus Bells
-533,XG Synth Effects,Soft Crystal
-534,XG Synth Effects,Air Bells
-535,XG Synth Effects,Bell Harp
-536,XG Synth Effects,Gamelimba
-537,XG Synth Effects,Atmosphere
-538,XG Synth Effects,Warm Atmosphere
-539,XG Synth Effects,Hollow Release
-540,XG Synth Effects,Nylon Electric Piano
-541,XG Synth Effects,Nylon Harp
-542,XG Synth Effects,Harp Vox
-543,XG Synth Effects,Atmosphere Pad
-544,XG Synth Effects,Brightness
-545,XG Synth Effects,Goblins
-546,XG Synth Effects,Goblins Synth
-547,XG Synth Effects,Creeper
-548,XG Synth Effects,Ritual
-549,XG Synth Effects,To Heaven
-550,XG Synth Effects,Night
-551,XG Synth Effects,Glisten
-552,XG Synth Effects,Bell Choir
-553,XG Synth Effects,Echoes
-554,XG Synth Effects,Big Pan
-555,XG Synth Effects,Sci-Fi
-556,XG World,Shakuhachi
-557,XG World,Tamboura
-558,XG World,Banjo
-559,XG World,Muted Banjo
-560,XG Percussive,Tinkle Bell
-561,XG Percussive,Bonang
-562,XG Percussive,Altair
-563,XG Percussive,Gamelan Gongs
-564,XG Percussive,Stereo Gamelan Gongs
-565,XG Percussive,Rama Cymbal
-566,XG Percussive,Agogo
-567,XG Percussive,Steel Drums
-568,XG Percussive,Glass Percussion
-569,XG Percussive,Thai Bells
-570,XG Percussive,Woodblock
-571,XG Percussive,Castanets
-572,XG Percussive,Taiko Drum
-573,XG Percussive,Gran Cassa
-574,XG Percussive,Melodic Tom 1
-575,XG Percussive,Melodic Tom 2
-576,XG Percussive,Real Tom
-577,XG Percussive,Rock Tom
-578,XG Percussive,Synth Drum
-579,XG Percussive,Analog Tom
-580,XG Percussive,Electronic Percussion
-581,XG Percussive,Reverse Cymbal
-582,XG Sound Effects,Cutting Noise 1
-583,XG Sound Effects,Cutting Noise 2
-584,XG Sound Effects,String Slap
-585,XG Sound Effects,Flute Key Click
-586,XG Sound Effects,Shower
-587,XG Sound Effects,Thunder
-588,XG Sound Effects,Wind
-589,XG Sound Effects,Stream
-590,XG Sound Effects,Bubble
-591,XG Sound Effects,Feed
-592,XG Sound Effects,Dog
-593,XG Sound Effects,Horse
-594,XG Sound Effects,Bird Tweet 2
-595,XG Sound Effects,Maou
-596,XG Sound Effects,Phone Call
-597,XG Sound Effects,Door Squeak
-598,XG Sound Effects,Door Slam
-599,XG Sound Effects,Scratch Cut
-600,XG Sound Effects,Scratch Split
-601,XG Sound Effects,Wind Chime
-602,XG Sound Effects,Telephone Ring 2
-603,XG Sound Effects,Car Engine Ignition
-604,XG Sound Effects,Car Tires Squeal
-605,XG Sound Effects,Car Passing
-606,XG Sound Effects,Car Crash
-607,XG Sound Effects,Siren
-608,XG Sound Effects,Train
-609,XG Sound Effects,Jet Plane
-610,XG Sound Effects,Starship
-611,XG Sound Effects,Burst
-612,XG Sound Effects,Roller Coaster
-613,XG Sound Effects,Submarine
-614,XG Sound Effects,Laugh
-615,XG Sound Effects,Scream
-616,XG Sound Effects,Punch
-617,XG Sound Effects,Heartbeat
-618,XG Sound Effects,Footsteps
-619,XG Sound Effects,Machine Gun
-620,XG Sound Effects,Laser Gun
-621,XG Sound Effects,Explosion
-622,XG Sound Effects,Firework'`;
+1, Live! Concert Grand Piano, Piano
+2, Rock Piano, Piano
+3, Warm Piano, Piano
+4, Ambient Piano, Piano
+5, Stereo Grand Piano, Piano
+6, Octave Piano, Piano
+7, Bright Piano, Piano
+8, S.Art Lite Harpsichord, Piano
+9, Harpsichord, Piano
+10, Octave Harpsichord, Piano
+11, Honky Tonk Piano, Piano
+12, MIDI Grand Piano, Piano
+13, CP80, Piano
+14, Piano & Strings, Piano
+15, Piano Pad 1, Piano
+16, Piano Pad 2, Piano
+17, Piano Pad 3, Piano
+18, Piano Pad 4, Piano
+19, Ballad Comp & Piano, Piano
+20, Soft Piano Pad, Piano
+21, VP Soft Piano Pad, Piano
+22, Chorus Smooth Electric Piano, Piano
+23, Phaser Smooth Electric Piano, Piano
+24, Tremolo Smooth Electric Piano, Piano
+25, Pan Smooth Electric Piano, Piano
+26, Cool! Suitcase Electric Piano, Piano
+27, Jazz Chorus Electric Piano, Piano
+28, Phaser Electric Piano, Piano
+29, Cool! Tremolo Electric Piano, Piano
+30, Cool! Electric Piano, Piano
+31, Stage Electric Piano, Piano
+32, Vintage Electric Piano, Piano
+33, Cool! Galaxy Electric Piano, Piano
+34, Hyper Tines, Piano
+35, Tiny Electric Piano, Piano
+36, Funky Electric Piano, Piano
+37, DX Modern Electric Piano, Piano
+38, Venus Electric Piano, Piano
+39, Small Electric Piano Pad, Piano
+40, Electric Piano Pad, Piano
+41, Clavi, Piano
+42, Wah Clavi, Piano
+43, Progressive, Organ
+44, Jazz Lead, Organ
+45, Gospel Shout, Organ
+46, Hard Rock, Organ
+47, Clean Amp, Organ
+48, Jazz Swish, Organ
+49, Jazz Light, Organ
+50, Gospel Worship, Organ
+51, 8Feet, Organ
+52, White Bar, Organ
+53, Cool! Organ, Organ
+54, Cool! Rotor Organ, Organ
+55, Jazz Organ 1, Organ
+56, Jazz Organ 1 + Rotary Fast, Organ
+57, Jazz Organ 2, Organ
+58, Jazz Organ 2 + Rotary Fast, Organ
+59, Rock Organ, Organ
+60, Octave Shift Organ, Organ
+61, Purple Organ, Organ
+62, Itende Organ, Organ
+63, Click Organ, Organ
+64, Bright Organ, Organ
+65, Theater Organ, Organ
+66, 16'+2' Organ, Organ
+67, 16'+4' Organ, Organ
+68, Full Organ, Organ
+69, S.Art Lite Pipe Organ, Organ
+70, Cathedral, Organ
+71, Small Organ, Organ
+72, Pipe Organ, Organ
+73, Reed Organ, Organ
+74, Musette Accordion, Organ
+75, Tutti Accordion, Organ
+76, Bandoneon, Organ
+77, Sweet! Harmonica, Organ
+78, Modern Harp, Organ
+79, Blues Harmonica, Organ
+80, Harmonica, Organ
+81, S.Art Lite Nylon Guitar Harmonics, Guitar & Bass
+82, S.Art Lite Steel Guitar Harmonics, Guitar & Bass
+83, S.Art Lite Nylon Guitar Slide, Guitar & Bass
+84, S.Art Lite Steel Guitar Slide, Guitar & Bass
+85, S.Art Lite Distortion Guitar, Guitar & Bass
+86, Dynamic Nylon Guitar, Guitar & Bass
+87, Dynamic Overdriven, Guitar & Bass
+88, Dynamic Distortion Guitar, Guitar & Bass
+89, Nylon Guitar, Guitar & Bass
+90, Classical Guitar, Guitar & Bass
+91, Steel Guitar, Guitar & Bass
+92, Folk Guitar, Guitar & Bass
+93, Jazz Guitar, Guitar & Bass
+94, Octave Jazz Guitar, Guitar & Bass
+95, 60s Clean Guitar, Guitar & Bass
+96, 12Strings Guitar, Guitar & Bass
+97, Bright Clean Guitar, Guitar & Bass
+98, Clean Guitar, Guitar & Bass
+99, Wah Guitar, Guitar & Bass
+100, Octave Guitar, Guitar & Bass
+101, Muted Guitar, Guitar & Bass
+102, Overdriven Guitar, Guitar & Bass
+103, Distortion Guitar, Guitar & Bass
+104, Wah Distortion Guitar, Guitar & Bass
+105, S.Art Lite Slap Bass, Guitar & Bass
+106, Dynamic Electric Bass, Guitar & Bass
+107, Finger Bass, Guitar & Bass
+108, Acoustic Bass, Guitar & Bass
+109, Pick Bass, Guitar & Bass
+110, Fretless Bass, Guitar & Bass
+111, Slap Bass, Guitar & Bass
+112, Multi Saw Bass, Guitar & Bass
+113, Deep Sub, Guitar & Bass
+114, DX100 Bass, Guitar & Bass
+115, Ramp Bass, Guitar & Bass
+116, Dark Core Bass, Guitar & Bass
+117, Fat Lo Bass, Guitar & Bass
+118, Bleep Bass, Guitar & Bass
+119, Funk Bass, Guitar & Bass
+120, Synth Bass, Guitar & Bass
+121, Hi-Q Bass, Guitar & Bass
+122, Dance Bass, Guitar & Bass
+123, Click Organ Bass, Guitar & Bass
+124, S.Art Lite Strings, Strings
+125, Live! Strings, Strings
+126, Studio Strings, Strings
+127, Strings, Strings
+128, Chamber Strings, Strings
+129, Marcato Strings, Strings
+130, Slow Strings, Strings
+131, Octave Strings, Strings
+132, Orchestra Section, Strings
+133, Strings & Brass, Strings
+134, Orchestra Tutti, Strings
+135, Tremolo Strings, Strings
+136, Synth Strings, Strings
+137, Pizzicato Strings, Strings
+138, Orchestra Pizzicato Strings, Strings
+139, Octave Pizzicato Strings, Strings
+140, Sweet! Violin, Strings
+141, Violin, Strings
+142, Cello, Strings
+143, Strings Session, Strings
+144, Contrabass, Strings
+145, Harp, Strings
+146, Octave Harp, Strings
+147, Orchestra Hit, Strings
+148, Orchestra Hit & Timpani, Strings
+149, S.Art Lite Shoo Bee Do Bah, Strings
+150, S.Art Lite Da Ba Scat, Strings
+151, S.Art Lite Gospel Hmm & Wow, Strings
+152, Choir, Strings
+153, Gospel Hmm, Strings
+154, Gospel Wow, Strings
+155, Vocal Ensemble, Strings
+156, Air Choir, Strings
+157, Octave Choir, Strings
+158, Vox Humana, Strings
+159, S.Art Lite Brass Section, Brass & Woodwind
+160, Live! Brass, Brass & Woodwind
+161, Brass Section, Brass & Woodwind
+162, Big Band Brass, Brass & Woodwind
+163, Octave Brass, Brass & Woodwind
+164, Ballroom Brass, Brass & Woodwind
+165, Jazz Brass Section, Brass & Woodwind
+166, Jazz Section, Brass & Woodwind
+167, Brass Tutti, Brass & Woodwind
+168, Orchestra Brass, Brass & Woodwind
+169, Brass Hit, Brass & Woodwind
+170, 80s Brass, Brass & Woodwind
+171, Fat Synth Brass, Brass & Woodwind
+172, Mellow Horns, Brass & Woodwind
+173, Funky Brass, Brass & Woodwind
+174, Techno Brass, Brass & Woodwind
+175, Synth Brass, Brass & Woodwind
+176, Sweet! Trumpet, Brass & Woodwind
+177, Sweet! Trombone, Brass & Woodwind
+178, Trumpet, Brass & Woodwind
+179, Distortion Trumpet, Brass & Woodwind
+180, Trombone, Brass & Woodwind
+181, Trombone Section, Brass & Woodwind
+182, Trumpet & Trombone, Brass & Woodwind
+183, Muted Trumpet, Brass & Woodwind
+184, French Horn, Brass & Woodwind
+185, Octave French Horns, Brass & Woodwind
+186, Tuba, Brass & Woodwind
+187, S.Art Lite Tenor Sax, Brass & Woodwind
+188, Sweet! Tenor Sax, Brass & Woodwind
+189, Sweet! Soprano Sax, Brass & Woodwind
+190, Sax Section, Brass & Woodwind
+191, Small Sax Section, Brass & Woodwind
+192, Ballroom Sax Ensemble, Brass & Woodwind
+193, Sax & Trombone, Brass & Woodwind
+194, Tenor Sax, Brass & Woodwind
+195, Alto Sax, Brass & Woodwind
+196, Soprano Sax, Brass & Woodwind
+197, Baritone Sax, Brass & Woodwind
+198, Breathy Tenor Sax, Brass & Woodwind
+199, Clarinet, Brass & Woodwind
+200, Oboe, Brass & Woodwind
+201, English Horn, Brass & Woodwind
+202, Bassoon, Brass & Woodwind
+203, Woodwind Ensemble, Brass & Woodwind
+204, S.Art Lite Flute, Brass & Woodwind
+205, Sweet! Flute, Brass & Woodwind
+206, Sweet! Classical Flute, Brass & Woodwind
+207, Sweet! Pan Flute, Brass & Woodwind
+208, Flute, Brass & Woodwind
+209, Flute & Clarinet, Brass & Woodwind
+210, Piccolo, Brass & Woodwind
+211, Pan Flute, Brass & Woodwind
+212, Recorder, Brass & Woodwind
+213, Ocarina, Brass & Woodwind
+214, Oja Flute, World
+215, Quena, World
+216, Charango, World
+217, Banjo, World
+218, Fiddle, World
+219, Trompeta Banda, World
+220, Trombon Banda, World
+221, Bagpipe, World
+222, Dulcimer 1, World
+223, Dulcimer 2, World
+224, Cimbalom, World
+225, Tremolo Cimbalom, World
+226, Tambra / Tanpura, World
+227, Santur, World
+228, Kanoon, World
+229, Oud, World
+230, Rabab, World
+231, Kalimba, World
+232, Harmonium Single Reed, World
+233, Harmonium Double Reed, World
+234, Harmonium Triple Reed, World
+235, Sitar 1, World
+236, Sitar 2, World
+237, Detuned Sitar, World
+238, Shehnai, World
+239, Pungi, World
+240, Bansuri, World
+241, Gopichant, World
+242, Tabla, World
+243, Er Hu, World
+244, Di Zi, World
+245, Pi Pa, World
+246, Gu Zheng, World
+247, Yang Qin, World
+248, Tremolo Yang Qin, World
+249, Morin Khuur, World
+250, Suling, World
+251, Shamisen, World
+252, Koto, World
+253, Taisho-kin, World
+254, Hichiriki, World
+255, Gemini, Synth & Pads
+256, Hands Up!, Synth & Pads
+257, VP Soft, Synth & Pads
+258, Dark Fat Saw, Synth & Pads
+259, RS Saw Lead 1, Synth & Pads
+260, RS Saw Lead 2, Synth & Pads
+261, RS Dist Lead, Synth & Pads
+262, RS Dual Square, Synth & Pads
+263, RS Ramp Lead, Synth & Pads
+264, RS Tech Saw, Synth & Pads
+265, RS Quack Lead, Synth & Pads
+266, RS Dual Saw, Synth & Pads
+267, RS Sync 1, Synth & Pads
+268, RS Sync 2, Synth & Pads
+269, Bright Decay, Synth & Pads
+270, Square Lead, Synth & Pads
+271, Sawtooth Lead, Synth & Pads
+272, Square & Saw, Synth & Pads
+273, Under Heim, Synth & Pads
+274, Portatone, Synth & Pads
+275, Itende Synth, Synth & Pads
+276, Analogon, Synth & Pads
+277, Fargo, Synth & Pads
+278, Voice Lead, Synth & Pads
+279, Funky Lead, Synth & Pads
+280, Octave Lead, Synth & Pads
+281, Wah Square Lead, Synth & Pads
+282, Resonance Lead, Synth & Pads
+283, Quack Lead, Synth & Pads
+284, 5th Wah Lead, Synth & Pads
+285, Super 5th Lead, Synth & Pads
+286, Punchy Chordz / Trancy Chordz, Synth & Pads
+287, Ballad Comp, Synth & Pads
+288, Fat Chordz, Synth & Pads
+289, RS Analog Pad, Synth & Pads
+290, RS Synth Pad, Synth & Pads
+291, RS Warm Pad, Synth & Pads
+292, RS Short Resonance, Synth & Pads
+293, RS Noise Pad, Synth & Pads
+294, RS Tekno Man, Synth & Pads
+295, Atmospheric Pad, Synth & Pads
+296, Sweet Heaven, Synth & Pads
+297, Dream Heaven, Synth & Pads
+298, Symbiont, Synth & Pads
+299, Stardust, Synth & Pads
+300, Xenon Pad, Synth & Pads
+301, Equinox, Synth & Pads
+302, Fantasia, Synth & Pads
+303, Dark Moon, Synth & Pads
+304, Brightness, Synth & Pads
+305, Bell Pad, Synth & Pads
+306, Wind Chime Pad, Synth & Pads
+307, Vibraphone / Jazz Vibes, Percussion & Drum Kits
+308, Marimba, Percussion & Drum Kits
+309, Tremolo Marimba, Percussion & Drum Kits
+310, Xylophone, Percussion & Drum Kits
+311, Tremolo Xylophone, Percussion & Drum Kits
+312, Steel Drums, Percussion & Drum Kits
+313, Tremolo Steel Drums, Percussion & Drum Kits
+314, Celesta, Percussion & Drum Kits
+315, Music Box, Percussion & Drum Kits
+316, Tubular Bells, Percussion & Drum Kits
+317, Timpani, Percussion & Drum Kits
+318, Timpani Roll, Percussion & Drum Kits
+319, Real Drum Kit, Percussion & Drum Kits
+320, HipHop Kit, Percussion & Drum Kits
+321, Dubstep Kit, Percussion & Drum Kits
+322, Punchy Kit, Percussion & Drum Kits
+323, Trap Kit, Percussion & Drum Kits
+324, Power Kit, Percussion & Drum Kits
+325, Standard Kit 1, Percussion & Drum Kits
+326, Standard Kit 2, Percussion & Drum Kits
+327, Room Kit, Percussion & Drum Kits
+328, Rock Kit, Percussion & Drum Kits
+329, Electronic Kit, Percussion & Drum Kits
+330, House Kit, Percussion & Drum Kits
+331, T8 Kit / T9 Kit, Percussion & Drum Kits
+332, Analog Kit, Percussion & Drum Kits
+333, Dance Kit, Percussion & Drum Kits
+334, Jazz Kit / Brush Kit, Percussion & Drum Kits
+335, Symphony Kit, Percussion & Drum Kits
+336, SFX Kit 1, Percussion & Drum Kits
+337, SFX Kit 2, Percussion & Drum Kits
+338, Bass Drum Kit, Percussion & Drum Kits
+339, Reverse Bass Drum Kit, Percussion & Drum Kits
+340, China Regional Kit, Percussion & Drum Kits
+341, Indonesian Regional Kit, Percussion & Drum Kits
+342, Indian Regional Kit, Percussion & Drum Kits
+343, Arabic Regional Kit, Percussion & Drum Kits
+344, African Regional Kit, Percussion & Drum Kits
+345, Cuban Regional Kit, Percussion & Drum Kits
+346, Argentina Regional Kit, Percussion & Drum Kits
+347, Colombia Regional Kit, Percussion & Drum Kits
+348, Uruguay Regional Kit, Percussion & Drum Kits
+349, Piano, XGlite
+350, Bright Piano, XGlite
+351, Electric Grand Piano, XGlite
+352, Honky-tonk Piano, XGlite
+353, Electric Piano 1, XGlite
+354, Electric Piano 2, XGlite
+355, Harpsichord, XGlite
+356, Clavi, XGlite
+357, Celesta, XGlite
+358, Glockenspiel, XGlite
+359, Music Box, XGlite
+360, Vibraphone, XGlite
+361, Marimba, XGlite
+362, Xylophone, XGlite
+363, Tubular Bells, XGlite
+364, Dulcimer, XGlite
+365, Drawbar Organ, XGlite
+366, Percussive Organ, XGlite
+367, Rock Organ, XGlite
+368, Church Organ, XGlite
+369, Reed Organ, XGlite
+370, Accordion, XGlite
+371, Harmonica, XGlite
+372, Tango Accordion, XGlite
+373, Acoustic Guitar (nylon), XGlite
+374, Acoustic Guitar (steel), XGlite
+375, Electric Guitar (jazz), XGlite
+376, Electric Guitar (clean), XGlite
+377, Electric Guitar (muted), XGlite
+378, Overdriven Guitar, XGlite
+379, Distortion Guitar, XGlite
+380, Guitar Harmonics, XGlite
+381, Acoustic Bass, XGlite
+382, Electric Bass (finger), XGlite
+383, Electric Bass (pick), XGlite
+384, Fretless Bass, XGlite
+385, Slap Bass 1, XGlite
+386, Slap Bass 2, XGlite
+387, Synth Bass 1, XGlite
+388, Synth Bass 2, XGlite
+389, Violin, XGlite
+390, Viola, XGlite
+391, Cello, XGlite
+392, Contrabass, XGlite
+393, Tremolo Strings, XGlite
+394, Pizzicato Strings, XGlite
+395, Orchestral Harp, XGlite
+396, Timpani, XGlite
+397, String Ensemble 1, XGlite
+398, String Ensemble 2, XGlite
+399, Synth Strings 1, XGlite
+400, Synth Strings 2, XGlite
+401, Choir Aahs, XGlite
+402, Voice Oohs, XGlite
+403, Synth Voice, XGlite
+404, Orchestra Hit, XGlite
+405, Trumpet, XGlite
+406, Trombone, XGlite
+407, Tuba, XGlite
+408, Muted Trumpet, XGlite
+409, French Horn, XGlite
+410, Brass Section, XGlite
+411, Synth Brass 1, XGlite
+412, Synth Brass 2, XGlite
+413, Soprano Sax, XGlite
+414, Alto Sax, XGlite
+415, Tenor Sax, XGlite
+416, Baritone Sax, XGlite
+417, Oboe, XGlite
+418, English Horn, XGlite
+419, Bassoon, XGlite
+420, Clarinet, XGlite
+421, Piccolo, XGlite
+422, Flute, XGlite
+423, Recorder, XGlite
+424, Pan Flute, XGlite
+425, Blown Bottle, XGlite
+426, Shakuhachi, XGlite
+427, Whistle, XGlite
+428, Ocarina, XGlite
+429, Square Lead, XGlite
+430, Sawtooth Lead, XGlite
+431, Calliope Lead, XGlite
+432, Chiff Lead, XGlite
+433, Charang Lead, XGlite
+434, Voice Lead, XGlite
+435, Fifths Lead, XGlite
+436, Bass & Lead, XGlite
+437, New Age Pad, XGlite
+438, Warm Pad, XGlite
+439, Polysynth Pad, XGlite
+440, Choir Pad, XGlite
+441, Bowed Pad, XGlite
+442, Metallic Pad, XGlite
+443, Halo Pad, XGlite
+444, Sweep Pad, XGlite
+445, Rain, XGlite
+446, Soundtrack, XGlite
+447, Crystal, XGlite
+448, Atmosphere, XGlite
+449, Brightness, XGlite
+450, Goblins, XGlite
+451, Echoes, XGlite
+452, Sci-Fi, XGlite
+453, Sitar, XGlite
+454, Banjo, XGlite
+455, Shamisen, XGlite
+456, Koto, XGlite
+457, Kalimba, XGlite
+458, Bagpipe, XGlite
+459, Fiddle, XGlite
+460, Shanai, XGlite
+461, Tinkle Bell, XGlite
+462, Agogo, XGlite
+463, Steel Drums, XGlite
+464, Woodblock, XGlite
+465, Taiko Drum, XGlite
+466, Melodic Tom, XGlite
+467, Synth Drum, XGlite
+468, Reverse Cymbal, XGlite
+469, Guitar Fret Noise, XGlite
+470, Breath Noise, XGlite
+471, Seashore, XGlite
+472, Bird Tweet, XGlite
+473, Telephone Ring, XGlite
+474, Helicopter, XGlite
+475, Applause, XGlite
+476, Gunshot, XGlite
+477, Cutting Noise 1, Sound Effect
+478, Cutting Noise 2, Sound Effect
+479, String Slap, Sound Effect
+480, Fl. Key Click, Sound Effect
+481, Laughing, Sound Effect
+482, Scream, Sound Effect
+483, Punch, Sound Effect
+484, Heartbeat, Sound Effect
+485, Footsteps, Sound Effect
+486, Door Creak, Sound Effect
+487, Door Slam, Sound Effect
+488, Scratch, Sound Effect
+489, Wind Chime, Sound Effect
+490, Car Engine Ignition, Sound Effect
+491, Car Tires Squeal, Sound Effect
+492, Car Crash, Sound Effect
+493, Siren, Sound Effect
+494, Train, Sound Effect
+495, Jetplane, Sound Effect
+496, Starship, Sound Effect
+497, Burst Noise, Sound Effect
+498, Wind, Sound Effect
+499, Stream, Sound Effect
+500, Bubble, Sound Effect
+501, Feed, Sound Effect
+502, Dog, Sound Effect
+503, Horse Gallop, Sound Effect
+504, Bird Tweet 2, Sound Effect
+505, Ghost, Sound Effect
+506, Maou, Sound Effect
+507, Phone Call, Sound Effect
+508, Doorbell, Sound Effect
+509, Alarm Clock, Sound Effect
+510, Music Box, Sound Effect
+511, Coin, Sound Effect
+512, Scratch 2, Sound Effect
+513, Camera, Sound Effect
+514, Car Pass, Sound Effect
+515, Gunshot 2, Sound Effect
+516, Machine Gun, Sound Effect
+517, Laser Gun, Sound Effect
+518, Explosion, Sound Effect
+519, Grand Piano KSP, XGlite
+520, Piano Effect, XGlite
+521, Bright Piano KSP, XGlite
+522, Honky-tonk KSP, XGlite
+523, El.Piano 1 KSP, XGlite
+524, El.Piano 2 KSP, XGlite
+525, Harpsichord KSP, XGlite
+526, Clavi KSP, XGlite
+527, Octave Piano 1, XGlite
+528, Octave Piano 2, XGlite
+529, Piano & Strings, XGlite
+530, Piano & Choir, XGlite
+531, EP Legend, XGlite
+532, EP Phase, XGlite
+533, Chorus EP 1, XGlite
+534, Chorus EP 2, XGlite
+535, DX EP Hard, XGlite
+536, DX EP Legend, XGlite
+537, DX Legend, XGlite
+538, EP Virtuoso, XGlite
+539, 60s EP, XGlite
+540, Harpsichord 2, XGlite
+541, Harpsichord 3, XGlite
+542, Clavi Wah, XGlite
+543, Clavi FX, XGlite
+544, Celesta 2, XGlite
+545, Glockenspiel 2, XGlite
+546, Music Box 2, XGlite
+547, Vibraphone 2, XGlite
+548, Marimba 2, XGlite
+549, Xylophone 2, XGlite
+550, Tubular Bells 2, XGlite
+551, Church Bell, XGlite
+552, Carillon, XGlite
+553, Dulcimer 2, XGlite
+554, Santur 2, XGlite
+555, Drawbar Organ 2, XGlite
+556, Detuned Drawbar, XGlite
+557, 60s Drawbar Organ 1, XGlite
+558, 60s Drawbar Organ 2, XGlite
+559, 70s Drawbar Organ, XGlite
+560, Percussive Organ 2, XGlite
+561, 70s Percussive Organ, XGlite
+562, Rock Organ 2, XGlite
+563, Church Organ 2, XGlite
+564, Church Organ 3, XGlite
+565, Puff Organ, XGlite
+566, Reed Organ 2, XGlite
+567, Accordion 2, XGlite
+568, Accordion 3, XGlite
+569, Harmonica 2, XGlite
+570, Tango Accordion 2, XGlite
+571, Nylon Guitar 2, XGlite
+572, Nylon Guitar 3, XGlite
+573, Velocity Nylon, XGlite
+574, Steel Guitar 2, XGlite
+575, 12-String Guitar, XGlite
+576, Mandolin, XGlite
+577, Steel Guitar 3, XGlite
+578, Jazz Guitar 2, XGlite
+579, Jazz Guitar 3, XGlite
+580, Clean Guitar 2, XGlite
+581, Chorus Guitar, XGlite
+582, Muted Guitar 2, XGlite
+583, Funk Guitar 1, XGlite
+584, Funk Guitar 2, XGlite
+585, Overdriven 2, XGlite
+586, Guitar Pinch, XGlite
+587, Distortion 2, XGlite
+588, Feedback Guitar, XGlite
+589, Guitar Harmonics 2, XGlite
+590, Acoustic Bass 2, XGlite
+591, Finger Bass 2, XGlite
+592, Finger Slap Bass, XGlite
+593, Pick Bass 2, XGlite
+594, Fretless Bass 2, XGlite
+595, Slap Bass 1 Var, XGlite
+596, Slap Bass 2 Var, XGlite
+597, Synth Bass 1 Var, XGlite
+598, Synth Bass 2 Var, XGlite
+599, Synth Bass 3, XGlite
+600, Synth Bass 4, XGlite
+601, Violin 2, XGlite
+602, Slow Violin, XGlite
+603, Viola 2, XGlite
+604, Cello 2, XGlite
+605, Contrabass 2, XGlite
+606, Tremolo Strings 2, XGlite
+607, Pizzicato Strings 2, XGlite
+608, Harp 2, XGlite
+609, Timpani 2, XGlite
+610, Strings Ensemble 2, XGlite
+611, Strings Ensemble 3, XGlite
+612, Synth Strings 1 Var, XGlite
+613, Synth Strings 2 Var, XGlite
+614, Synth Strings 3, XGlite
+615, Choir Aahs 2, XGlite
+616, Voice Oohs 2, XGlite
+617, Humming, XGlite
+618, Synth Voice 2, XGlite
+619, Orchestra Hit 2, XGlite
+620, Trumpet 2, XGlite
+621, Dark Trumpet, XGlite
+622, Trombone 2, XGlite
+623, Tuba 2, XGlite
+624, Muted Trumpet 2, XGlite
+625, French Horn 2, XGlite
+626, Brass Section 2, XGlite
+627, Synth Brass 1 Var, XGlite
+628, Synth Brass 2 Var, XGlite
+629, Synth Brass 3, XGlite
+630, Soprano Sax 2, XGlite
+631, Alto Sax 2, XGlite
+632, Tenor Sax 2, XGlite
+633, Baritone Sax 2, XGlite
+634, Oboe 2, XGlite
+635, English Horn 2, XGlite
+636, Bassoon 2, XGlite
+637, Clarinet 2, XGlite
+638, Piccolo 2, XGlite
+639, Flute 2, XGlite
+640, Recorder 2, XGlite
+641, Pan Flute 2, XGlite
+642, Bottle Blow 2, XGlite
+643, Shakuhachi 2, XGlite
+644, Whistle 2, XGlite
+645, Ocarina 2, XGlite
+646, Square Lead 2, XGlite
+647, Sawtooth Lead 2, XGlite
+648, Thick Sawtooth, XGlite
+649, Calliope 2, XGlite
+650, Chiff 2, XGlite
+651, Charang 2, XGlite
+652, Voice Lead 2, XGlite
+653, Fifths 2, XGlite
+654, Bass & Lead 2, XGlite
+655, New Age Pad 2, XGlite
+656, Warm Pad 2, XGlite
+657, Polysynth 2, XGlite
+658, Choir Pad 2, XGlite
+659, Bowed Pad 2, XGlite
+660, Metallic Pad 2, XGlite
+661, Halo Pad 2, XGlite
+662, Sweep Pad 2, XGlite
+663, Rain 2, XGlite
+664, Soundtrack 2, XGlite
+665, Crystal 2, XGlite
+666, Atmosphere 2, XGlite
+667, Brightness 2, XGlite
+668, Goblins 2, XGlite
+669, Echoes 2, XGlite
+670, Sci-Fi 2, XGlite
+671, Sitar 2 Var, XGlite
+672, Banjo 2, XGlite
+673, Shamisen 2, XGlite
+674, Koto 2, XGlite
+675, Taisho-kin, XGlite
+676, Kalimba 2, XGlite
+677, Bagpipe 2, XGlite
+678, Fiddle 2, XGlite
+679, Shanai 2, XGlite
+680, Tinkle Bell 2, XGlite
+681, Agogo 2, XGlite
+682, Steel Drums 2, XGlite
+683, Woodblock 2, XGlite
+684, Taiko Drum 2, XGlite
+685, Melodic Tom 2, XGlite
+686, Synth Drum 2, XGlite
+687, Reverse Cymbal 2, XGlite
+688, Fret Noise 2, XGlite
+689, Breath Noise 2, XGlite
+690, Seashore 2, XGlite
+691, Bird Tweet 3, XGlite
+692, Telephone 2, XGlite
+693, Helicopter 2, XGlite
+694, Applause 2, XGlite
+695, Gunshot 3, XGlite
+696, Standard Kit 1 XG, Drum Kits
+697, Standard Kit 2 XG, Drum Kits
+698, Room Kit XG, Drum Kits
+699, Rock Kit XG, Drum Kits
+700, Electro Kit XG, Drum Kits
+701, Analog Kit XG, Drum Kits
+702, Jazz Kit XG, Drum Kits
+703, Brush Kit XG, Drum Kits
+704, Symphony Kit XG, Drum Kits
+705, SFX Kit XG, Drum Kits
+706, Standard Kit 1 GM2, GM2
+707, Standard Kit 2 GM2, GM2
+708, Room Kit GM2, GM2
+709, Rock Kit GM2, GM2
+710, Electro Kit GM2, GM2
+711, Analog Kit GM2, GM2
+712, Jazz Kit GM2, GM2
+713, Brush Kit GM2, GM2
+714, Symphony Kit GM2, GM2
+715, SFX Kit GM2, GM2
+716, Grand Piano GM2, GM2
+717, Bright Piano GM2, GM2
+718, El.Grand Piano GM2, GM2
+719, Honky-tonk GM2, GM2
+720, El.Piano 1 GM2, GM2
+721, El.Piano 2 GM2, GM2
+722, Harpsichord GM2, GM2
+723, Clavi GM2, GM2
+724, Celesta GM2, GM2
+725, Glockenspiel GM2, GM2
+726, Music Box GM2, GM2
+727, Vibraphone GM2, GM2
+728, Marimba GM2, GM2
+729, Xylophone GM2, GM2
+730, Tubular Bells GM2, GM2
+731, Dulcimer GM2, GM2
+732, Drawbar Organ GM2, GM2
+733, Percussive Organ GM2, GM2
+734, Rock Organ GM2, GM2
+735, Church Organ GM2, GM2
+736, Reed Organ GM2, GM2
+737, Accordion GM2, GM2
+738, Harmonica GM2, GM2
+739, Tango Accordion GM2, GM2
+740, Nylon Guitar GM2, GM2
+741, Steel Guitar GM2, GM2
+742, Jazz Guitar GM2, GM2
+743, Clean Guitar GM2, GM2
+744, Muted Guitar GM2, GM2
+745, Overdriven GM2, GM2
+746, Distortion GM2, GM2
+747, Gtr Harmonics GM2, GM2
+748, Acoustic Bass GM2, GM2
+749, Finger Bass GM2, GM2
+750, Pick Bass GM2, GM2
+751, Fretless Bass GM2, GM2
+752, Slap Bass 1 GM2, GM2
+753, Slap Bass 2 GM2, GM2
+754, Synth Bass 1 GM2, GM2
+755, Synth Bass 2 GM2, GM2
+756, Violin GM2, GM2
+757, Viola GM2, GM2
+758, Cello GM2, GM2
+759, Contrabass GM2, GM2
+760, Tremolo Strings GM2, GM2
+761, Pizzicato GM2, GM2
+762, Harp GM2, GM2
+763, Timpani GM2, GM2
+764, Strings 1 GM2, GM2
+765, Strings 2 GM2, GM2
+766, Synth Strings 1 GM2, GM2
+767, Synth Strings 2 GM2, GM2
+768, Choir Aahs GM2, GM2
+769, Voice Oohs GM2, GM2
+770, Synth Voice GM2, GM2
+771, Orchestra Hit GM2, GM2
+772, Trumpet GM2, GM2
+773, Trombone GM2, GM2
+774, Tuba GM2, GM2
+775, Muted Trumpet GM2, GM2
+776, French Horn GM2, GM2
+777, Brass Section GM2, GM2
+778, Synth Brass 1 GM2, GM2
+779, Synth Brass 2 GM2, GM2
+780, Soprano Sax GM2, GM2
+781, Alto Sax GM2, GM2
+782, Tenor Sax GM2, GM2
+783, Baritone Sax GM2, GM2
+784, Oboe GM2, GM2
+785, English Horn GM2, GM2
+786, Bassoon GM2, GM2
+787, Clarinet GM2, GM2
+788, Piccolo GM2, GM2
+789, Flute GM2, GM2
+790, Recorder GM2, GM2
+791, Pan Flute GM2, GM2
+792, Bottle Blow GM2, GM2
+793, Shakuhachi GM2, GM2
+794, Whistle GM2, GM2
+795, Ocarina GM2, GM2
+796, Square Lead GM2, GM2
+797, Sawtooth Lead GM2, GM2
+798, Calliope GM2, GM2
+799, Chiff GM2, GM2
+800, Charang GM2, GM2
+801, Voice Lead GM2, GM2
+802, Fifths Lead GM2, GM2
+803, Bass & Lead GM2, GM2
+804, New Age Pad GM2, GM2
+805, Warm Pad GM2, GM2
+806, Polysynth GM2, GM2
+807, Choir Pad GM2, GM2
+808, Bowed Pad GM2, GM2
+809, Metallic Pad GM2, GM2
+810, Halo Pad GM2, GM2
+811, Sweep Pad GM2, GM2
+812, Rain GM2, GM2
+813, Soundtrack GM2, GM2
+814, Crystal GM2, GM2
+815, Atmosphere GM2, GM2
+816, Brightness GM2, GM2
+817, Goblins GM2, GM2
+818, Echoes GM2, GM2
+819, Sci-Fi GM2, GM2
+820, Sitar GM2, GM2
+821, Banjo GM2, GM2
+822, Shamisen GM2, GM2
+823, Koto GM2, GM2
+824, Kalimba GM2, GM2
+825, Bagpipe GM2, GM2
+826, Fiddle GM2, GM2
+827, Shanai GM2, GM2
+828, Tinkle Bell GM2, GM2
+829, Agogo GM2, GM2
+830, Steel Drums GM2, GM2
+831, Woodblock GM2, GM2
+832, Taiko Drum GM2, GM2
+833, Melodic Tom GM2, GM2
+834, Synth Drum GM2, GM2
+835, Reverse Cymbal GM2, GM2
+836, Fret Noise GM2, GM2
+837, Breath Noise GM2, GM2
+838, Seashore GM2, GM2
+839, Bird Tweet GM2, GM2
+840, Telephone GM2, GM2
+841, Helicopter GM2, GM2
+842, Applause GM2, GM2
+843, Gunshot GM2, GM2
+844, S.Art Lite Concert Grand Piano, Arpeggio Voice
+845, S.Art Lite Harpsichord, Arpeggio Voice
+846, S.Art Lite Nylon Guitar Harmonics, Arpeggio Voice
+847, S.Art Lite Steel Guitar Harmonics, Arpeggio Voice
+848, S.Art Lite Nylon Guitar Slide, Arpeggio Voice
+849, S.Art Lite Steel Guitar Slide, Arpeggio Voice
+850, S.Art Lite Distortion Guitar, Arpeggio Voice
+851, S.Art Lite Slap Bass, Arpeggio Voice
+852, S.Art Lite Strings, Arpeggio Voice
+853, S.Art Lite Shoo Bee Do Bah, Arpeggio Voice
+854, S.Art Lite Da Ba Scat, Arpeggio Voice
+855, S.Art Lite Gospel Hmm & Wow, Arpeggio Voice
+856, S.Art Lite Brass Section, Arpeggio Voice
+857, S.Art Lite Tenor Sax, Arpeggio Voice
+858, S.Art Lite Flute, Arpeggio Voice
+859, Live! Concert Grand Piano, Arpeggio Voice
+860, Cool! Suitcase Electric Piano, Arpeggio Voice
+861, Cool! Tremolo Electric Piano, Arpeggio Voice
+862, Cool! Electric Piano, Arpeggio Voice
+863, Cool! Galaxy Electric Piano, Arpeggio Voice
+864, Cool! Organ, Arpeggio Voice
+865, Cool! Rotor Organ, Arpeggio Voice
+866, Sweet! Harmonica, Arpeggio Voice
+867, Dynamic Nylon Guitar, Arpeggio Voice
+868, Dynamic Overdriven, Arpeggio Voice
+869, Dynamic Distortion Guitar, Arpeggio Voice
+870, Nylon Guitar, Arpeggio Voice
+871, Steel Guitar, Arpeggio Voice
+872, Folk Guitar, Arpeggio Voice
+873, Jazz Guitar, Arpeggio Voice
+874, Clean Guitar, Arpeggio Voice
+875, Muted Guitar, Arpeggio Voice
+876, Dynamic Electric Bass, Arpeggio Voice
+877, Finger Bass, Arpeggio Voice
+878, Acoustic Bass, Arpeggio Voice
+879, Pick Bass, Arpeggio Voice
+880, Fretless Bass, Arpeggio Voice
+881, Slap Bass, Arpeggio Voice
+882, Multi Saw Bass, Arpeggio Voice
+883, Deep Sub, Arpeggio Voice
+884, Live! Strings, Arpeggio Voice
+885, Studio Strings, Arpeggio Voice
+886, Sweet! Violin, Arpeggio Voice
+887, Live! Brass, Arpeggio Voice
+888, Sweet! Trumpet, Arpeggio Voice
+889, Sweet! Tenor Sax, Arpeggio Voice
+890, Sweet! Flute, Arpeggio Voice`;
         // =========================================================================
 
         let voices = [];
